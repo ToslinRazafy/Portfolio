@@ -726,7 +726,7 @@ export default function Portfolio() {
           backgroundColor: "var(--card)",
           color: "var(--muted-foreground)",
         }}
-        className="py-8 text-center md:pb-8 pb-20"
+        className="py-12 text-center md:pb-8 pb-20"
       >
         <motion.div
           initial="hidden"
