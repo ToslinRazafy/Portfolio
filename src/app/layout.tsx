@@ -26,15 +26,9 @@ export const metadata: Metadata = {
     title: "RAZAFITSOTRA Toslin - Portfolio",
     description:
       "Découvrez mes projets et compétences en développement web - React, Next.js, Laravel, et plus encore.",
-    url: "https://toslin-razafitsotra.vercel.app",
+    url: "https://toslin-five.vercel.app",
     siteName: "Portfolio de RAZAFITSOTRA Toslin",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "RAZAFITSOTRA Toslin - Portfolio",
-    description:
-      "Portfolio professionnel de RAZAFITSOTRA Toslin, développeur web.",
   },
 };
 

@@ -128,11 +128,7 @@ export default function Portfolio() {
       icon: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg",
     },
     {
-      name: "JavaFX",
-      icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/java/java-original.svg",
-    },
-    {
-      name: "Java Swing",
+      name: "Java",
       icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/java/java-original.svg",
     },
   ];
@@ -150,7 +146,7 @@ export default function Portfolio() {
     },
     {
       name: "qcm",
-      title: "QCM Interactif",
+      title: "QCM Gamifie",
       shortDescription: "Application de quiz interactifs.",
       fullDescription:
         "Quiz interactif avec Laravel, Socket.io pour mises à jour en temps réel, NextJs avec Chadcn UI, et PostgreSQL pour les données.",
@@ -468,7 +464,6 @@ export default function Portfolio() {
         </motion.div>
       </section>
 
-      {/* Programming Languages Section */}
       <section
         id="langages"
         style={{ backgroundColor: "var(--muted)" }}
@@ -720,13 +715,12 @@ export default function Portfolio() {
         </motion.div>
       </section>
 
-      {/* Footer */}
       <footer
         style={{
           backgroundColor: "var(--card)",
           color: "var(--muted-foreground)",
         }}
-        className="py-12 text-center md:pb-8 pb-20"
+        className="py-8 mb-20 text-center md:pb-8"
       >
         <motion.div
           initial="hidden"
@@ -738,7 +732,6 @@ export default function Portfolio() {
         </motion.div>
       </footer>
 
-      {/* Scroll to Top Button */}
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
@@ -757,7 +750,6 @@ export default function Portfolio() {
         )}
       </AnimatePresence>
 
-      {/* Zoomed Image Modal */}
       <AnimatePresence>
         {zoomedImage && (
           <motion.div
