@@ -336,37 +336,39 @@ export default function Portfolio() {
             Étudiant en informatique DAII en EMIT Fianarantsoa L3, passionné par
             le développement web.
           </motion.p>
-          <motion.button
+          <motion.div
             variants={fadeInUp}
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 0 15px rgba(255,255,255,0.5)",
-            }}
-            whileTap={{ scale: 0.95 }}
-            style={{
-              backgroundColor: "var(--secondary)",
-              color: "var(--primary)",
-            }}
-            className="px-8 py-3 rounded-full font-semibold shadow-lg transition-all duration-300"
+            className="flex flex-col md:flex-row justify-center gap-4"
           >
-            <a href="#projets">Découvrir mes projets</a>
-          </motion.button>
-          <motion.button
-            variants={fadeInUp}
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 0 15px rgba(255,255,255,0.5)",
-            }}
-            whileTap={{ scale: 0.95 }}
-            style={{
-              backgroundColor: "var(--secondary)",
-              color: "var(--primary)",
-            }}
-            className="px-8 py-3 rounded-full font-semibold shadow-lg transition-all duration-300"
-          >
-            
-            <a href="./CV_RAZAFITSOTRA_Toslin.pdf">Telecharger mon CV</a>
-          </motion.button>
+            <motion.button
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 15px rgba(255,255,255,0.5)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              style={{
+                backgroundColor: "var(--secondary)",
+                color: "var(--primary)",
+              }}
+              className="px-8 py-3 rounded-full font-semibold shadow-lg transition-all duration-300"
+            >
+              <a href="#projets">Découvrir mes projets</a>
+            </motion.button>
+            <motion.button
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 15px rgba(255,255,255,0.5)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              style={{
+                backgroundColor: "var(--secondary)",
+                color: "var(--primary)",
+              }}
+              className="px-8 py-3 rounded-full font-semibold shadow-lg transition-all duration-300"
+            >
+              <a href="./CV_RAZAFITSOTRA_Toslin.pdf">Télécharger mon CV</a>
+            </motion.button>
+          </motion.div>
         </motion.div>
       </section>
 
