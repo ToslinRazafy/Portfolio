@@ -131,6 +131,10 @@ export default function Portfolio() {
       name: "Java",
       icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/java/java-original.svg",
     },
+    {
+      name: "Flutter",
+      icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/flutter/flutter-original.svg",
+    },
   ];
 
   const projects = [
@@ -139,7 +143,7 @@ export default function Portfolio() {
       title: "Cosmétique E-commerce",
       shortDescription: "Une plateforme e-commerce pour produits cosmétiques.",
       fullDescription:
-        "Plateforme e-commerce complète avec Spring Boot et ReactJs, intégrant panier, paiement sécurisé via Stripe, authentification, et tableau de bord admin.",
+        "Plateforme e-commerce complète avec Spring Boot et ReactJs, intégrant panier, authentification, et tableau de bord admin.",
       github: "https://github.com/ToslinRazafy/Cosm-tique-E-commerce.git",
       languages: ["Spring Boot", "PostgreSQL", "ReactJs", "Tailwind CSS"],
       imageCount: 10,
@@ -179,6 +183,17 @@ export default function Portfolio() {
       github: "https://github.com/ToslinRazafy/Gestion-de-vente.git",
       languages: ["Laravel", "PostgreSQL", "Tailwind CSS"],
       imageCount: 4,
+    },
+    {
+      name: "toquiz",
+      title: "ToQuiz",
+      shortDescription:
+        "Découvrez ToQuiz, une application mobile pour défier vos connaissances avec des quiz captivants !",
+      fullDescription:
+        "ToQuiz est une application mobile développée avec Flutter, conçue pour offrir une expérience de quiz immersive et divertissante. Testez vos connaissances sur une variété de thèmes infromatique, grâce à des questions soigneusement élaborées. Avec une interface intuitive, des animations fluides et un design moderne, ToQuiz rend l'apprentissage amusant et addictif. Défiez vos amis avec vos score",
+      github: "https://github.com/ToslinRazafy/ToQuiz.git",
+      languages: ["Flutter"],
+      imageCount: 9,
     },
   ];
 
