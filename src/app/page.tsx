@@ -193,7 +193,7 @@ export default function Portfolio() {
         "ToQuiz est une application mobile développée avec Flutter, conçue pour offrir une expérience de quiz immersive et divertissante. Testez vos connaissances sur une variété de thèmes infromatique, grâce à des questions soigneusement élaborées. Avec une interface intuitive, des animations fluides et un design moderne, ToQuiz rend l'apprentissage amusant et addictif. Défiez vos amis avec vos score",
       github: "https://github.com/ToslinRazafy/ToQuiz.git",
       languages: ["Flutter"],
-      imageCount: 9,
+      imageCount: 1,
     },
   ];
 
