@@ -351,6 +351,22 @@ export default function Portfolio() {
           >
             <a href="#projets">Découvrir mes projets</a>
           </motion.button>
+          <motion.button
+            variants={fadeInUp}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 0 15px rgba(255,255,255,0.5)",
+            }}
+            whileTap={{ scale: 0.95 }}
+            style={{
+              backgroundColor: "var(--secondary)",
+              color: "var(--primary)",
+            }}
+            className="px-8 py-3 rounded-full font-semibold shadow-lg transition-all duration-300"
+          >
+            
+            <a href="./CV_RAZAFITSOTRA_Toslin.pdf">Telecharger mon CV</a>
+          </motion.button>
         </motion.div>
       </section>
 
