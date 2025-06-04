@@ -381,7 +381,7 @@ export default function Portfolio() {
               }}
               className="px-8 py-3 rounded-full font-semibold shadow-lg transition-all duration-300"
             >
-              <a href="./images/CV_RAZAFITSOTRA_Toslin.pdf">Télécharger mon CV</a>
+              <a href="/images/CV_RAZAFITSOTRA_Toslin.pdf">Télécharger mon CV</a>
             </motion.button>
           </motion.div>
         </motion.div>
