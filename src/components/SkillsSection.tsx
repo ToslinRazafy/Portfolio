@@ -104,7 +104,11 @@ export default function SkillsSection({
 
           <motion.div
             variants={staggerChildren}
-            className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 justify-center items-center"
+            className="grid gap-4 justify-center items-center mx-auto"
+            style={{
+              gridTemplateColumns: `repeat(auto-fit, minmax(150px, 1fr))`,
+              maxWidth: '720px',
+            }}
           >
             {filteredSkills.map((skill) => (
               <motion.div

@@ -88,8 +88,9 @@ export default function ProjectsSection({
                 backgroundColor: "var(--card)",
                 borderColor: "var(--border)",
               }}
-              className="p-6 rounded-xl border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full"
+              className="relative overflow-hidden group p-6 rounded-xl border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full backdrop-blur-none hover:backdrop-blur-md"
             >
+
               {/* Image Gallery */}
               <div className="relative h-48 mb-4 rounded-lg overflow-hidden group">
                 <Image
