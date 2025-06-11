@@ -9,7 +9,7 @@ import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import { frameworks, programmingLanguages, projects, tools, webTechnologies } from "@/lib/data";
 
-type ProjectKey = "cosmetique" | "qcm" | "stock" | "vente" | "toquiz"; // Suppression de ""
+type ProjectKey = "cosmetique" | "qcm" | "stock" | "vente" | "toquiz";
 
 export default function Portfolio() {
   const [currentImages, setCurrentImages] = useState<
@@ -127,7 +127,7 @@ export default function Portfolio() {
             variants={fadeInUp}
             className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-[var(--muted-foreground)]"
           >
-            Étudiant en informatique DAII à l'EMIT Fianarantsoa (L3), passionné
+            Étudiant en informatique DAII à l’EMIT Fianarantsoa (L3), passionné
             par le développement web.
           </motion.p>
 
@@ -196,7 +196,7 @@ export default function Portfolio() {
             className="leading-relaxed text-lg mb-8"
           >
             Je suis RAZAFITSOTRA Toslin, étudiant en 3ᵉ année de Licence en
-            Informatique, spécialité Développement d'Applications Internet et
+            Informatique, spécialité Développement d’Applications Internet et
             Intranet (DAII) à l’EMIT Fianarantsoa. Passionné par le
             développement web et le développement de jeux vidéo, j’utilise des
             technologies modernes comme React et Next.js pour créer des
@@ -217,7 +217,7 @@ export default function Portfolio() {
             className="text-lg italic mb-8"
           >
             {
-              "\"L'expérience est une lanterne que l'on porte sur le dos et qui n'éclaire que le chemin parcouru. Mais chaque pas enrichit notre lumière pour les routes à venir.\" – Confucius (adapté)"
+              "« L’expérience est une lanterne que l’on porte sur le dos et qui n’éclaire que le chemin parcouru. Mais chaque pas enrichit notre lumière pour les routes à venir. » – Confucius (adapté)"
             }
           </motion.blockquote>
         </motion.div>
@@ -236,7 +236,6 @@ export default function Portfolio() {
       <ProjectsSection
         currentImages={currentImages}
         setCurrentImages={setCurrentImages}
-        zoomedImage={zoomedImage}
         setZoomedImage={setZoomedImage}
         expandedProject={expandedProject}
         setExpandedProject={setExpandedProject}

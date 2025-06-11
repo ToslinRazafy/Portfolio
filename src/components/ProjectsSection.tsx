@@ -6,15 +6,12 @@ import Image from "next/image";
 import { projects } from "@/lib/data";
 import { Dispatch, SetStateAction } from "react";
 
-type ProjectKey = "cosmetique" | "qcm" | "stock" | "vente" | "toquiz"; // Suppression de ""
+type ProjectKey = "cosmetique" | "qcm" | "stock" | "vente" | "toquiz";
 
 interface ProjectsSectionProps {
   currentImages: Record<ProjectKey, number>;
   setCurrentImages: Dispatch<SetStateAction<Record<ProjectKey, number>>>;
-  zoomedImage: { project: string; index: number } | null;
-  setZoomedImage: Dispatch<
-    SetStateAction<{ project: string; index: number } | null>
-  >;
+  setZoomedImage: Dispatch<SetStateAction<{ project: string; index: number } | null>>;
   expandedProject: string | null;
   setExpandedProject: Dispatch<SetStateAction<string | null>>;
 }
@@ -39,7 +36,6 @@ const staggerChildren = {
 export default function ProjectsSection({
   currentImages,
   setCurrentImages,
-  zoomedImage,
   setZoomedImage,
   expandedProject,
   setExpandedProject,
