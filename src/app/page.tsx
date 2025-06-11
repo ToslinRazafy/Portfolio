@@ -9,7 +9,7 @@ import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import { frameworks, programmingLanguages, projects, tools, webTechnologies } from "@/lib/data";
 
-type ProjectKey = "cosmetique" | "qcm" | "stock" | "vente" | "toquiz" | "";
+type ProjectKey = "cosmetique" | "qcm" | "stock" | "vente" | "toquiz"; // Suppression de ""
 
 export default function Portfolio() {
   const [currentImages, setCurrentImages] = useState<
@@ -56,7 +56,7 @@ export default function Portfolio() {
       }));
     }, 3000);
     return () => clearInterval(interval);
-  }, [projects]);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -217,7 +217,7 @@ export default function Portfolio() {
             className="text-lg italic mb-8"
           >
             {
-              '"L’expérience est une lanterne que l’on porte sur le dos et qui n’éclaire que le chemin parcouru. Mais chaque pas enrichit notre lumière pour les routes à venir." – Confucius (adapté)'
+              "\"L'expérience est une lanterne que l'on porte sur le dos et qui n'éclaire que le chemin parcouru. Mais chaque pas enrichit notre lumière pour les routes à venir.\" – Confucius (adapté)"
             }
           </motion.blockquote>
         </motion.div>

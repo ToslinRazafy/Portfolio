@@ -6,7 +6,7 @@ import Image from "next/image";
 import { projects } from "@/lib/data";
 import { Dispatch, SetStateAction } from "react";
 
-type ProjectKey = "cosmetique" | "qcm" | "stock" | "vente" | "toquiz" | "";
+type ProjectKey = "cosmetique" | "qcm" | "stock" | "vente" | "toquiz"; // Suppression de ""
 
 interface ProjectsSectionProps {
   currentImages: Record<ProjectKey, number>;

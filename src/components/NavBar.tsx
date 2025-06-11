@@ -2,7 +2,6 @@
 
 import {
   motion,
-  useAnimation,
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
@@ -46,9 +45,14 @@ const staggerChildren = {
 export default function NavBar() {
   const [activeSection, setActiveSection] = useState("accueil");
   const [scrolled, setScrolled] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-  const controls = useAnimation();
   const { scrollY } = useScroll();
+
+  // Vérifier si le composant est monté côté client
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // Gestion du scroll
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -141,18 +145,20 @@ export default function NavBar() {
                 </motion.li>
               ))}
               {/* Toggle Button Desktop */}
-              <motion.li
-                whileTap={{ scale: 0.9 }}
-                whileHover={{ scale: 1.1 }}
-                className="cursor-pointer"
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              >
-                {theme === "dark" ? (
-                  <Sun size={20} className="text-[var(--primary)]" />
-                ) : (
-                  <Moon size={20} className="text-[var(--primary)]" />
-                )}
-              </motion.li>
+              {isMounted && (
+                <motion.li
+                  whileTap={{ scale: 0.9 }}
+                  whileHover={{ scale: 1.1 }}
+                  className="cursor-pointer"
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                >
+                  {theme === "dark" ? (
+                    <Sun size={20} className="text-[var(--primary)]" />
+                  ) : (
+                    <Moon size={20} className="text-[var(--primary)]" />
+                  )}
+                </motion.li>
+              )}
             </motion.ul>
           </div>
         </div>
@@ -202,18 +208,20 @@ export default function NavBar() {
       </motion.nav>
 
       {/* Floating Toggle Button Mobile */}
-      <motion.button
-        whileTap={{ scale: 0.9 }}
-        whileHover={{ scale: 1.1 }}
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        className="md:hidden fixed top-4 right-4 z-[100] p-2 rounded-full shadow-lg backdrop-blur-md bg-[var(--card)] border border-[var(--border)]"
-      >
-        {theme === "dark" ? (
-          <Sun size={20} className="text-[var(--primary)]" />
-        ) : (
-          <Moon size={20} className="text-[var(--primary)]" />
-        )}
-      </motion.button>
+      {isMounted && (
+        <motion.button
+          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.1 }}
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="md:hidden fixed top-4 right-4 z-[100] p-2 rounded-full shadow-lg backdrop-blur-md bg-[var(--card)] border border-[var(--border)]"
+        >
+          {theme === "dark" ? (
+            <Sun size={20} className="text-[var(--primary)]" />
+          ) : (
+            <Moon size={20} className="text-[var(--primary)]" />
+          )}
+        </motion.button>
+      )}
     </>
   );
 }
