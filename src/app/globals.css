@@ -1,0 +1,118 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --radius: 0.65rem;
+
+  /* Light mode (proche Tailwind site) */
+  --background: #f8fafc; /* gris très clair */
+  --foreground: #0f172a; /* gris foncé bleuté */
+
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+
+  --primary: #3b82f6; /* bleu Tailwind */
+  --primary-foreground: #ffffff;
+
+  --secondary: #e2e8f0; /* gris clair */
+  --secondary-foreground: #0f172a;
+
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+
+  --accent: #e2e8f0;
+  --accent-foreground: #0f172a;
+
+  --destructive: #ef4444;
+
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #3b82f6;
+
+  /* Charts Colors */
+  --chart-1: #3b82f6;
+  --chart-2: #0ea5e9;
+  --chart-3: #10b981;
+  --chart-4: #f59e0b;
+  --chart-5: #ef4444;
+
+  /* Sidebar */
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #3b82f6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e2e8f0;
+  --sidebar-accent-foreground: #0f172a;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #3b82f6;
+}
+
+.dark {
+  /* Dark mode (proche Tailwind site) */
+  --background: #0f172a; /* bleu/gris foncé */
+  --foreground: #f8fafc; /* blanc très doux */
+
+  --card: #1e293b;
+  --card-foreground: #f8fafc;
+
+  --popover: #1e293b;
+  --popover-foreground: #f8fafc;
+
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+
+  --secondary: #334155;
+  --secondary-foreground: #f8fafc;
+
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+
+  --accent: #334155;
+  --accent-foreground: #f8fafc;
+
+  --destructive: #f87171;
+
+  --border: #334155;
+  --input: #334155;
+  --ring: #3b82f6;
+
+  /* Charts Colors */
+  --chart-1: #3b82f6;
+  --chart-2: #0ea5e9;
+  --chart-3: #10b981;
+  --chart-4: #f59e0b;
+  --chart-5: #ef4444;
+
+  /* Sidebar */
+  --sidebar: #1e293b;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #3b82f6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #334155;
+  --sidebar-accent-foreground: #f8fafc;
+  --sidebar-border: #334155;
+  --sidebar-ring: #3b82f6;
+}
+
+.glow-effect {
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { filter: brightness(1) drop-shadow(0 0 5px var(--primary)); }
+  50% { filter: brightness(1.2) drop-shadow(0 0 10px var(--primary)); }
+}
+
+.card-hover:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
