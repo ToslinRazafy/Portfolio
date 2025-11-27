@@ -27,14 +27,6 @@ export const webTechnologies = [
 
 export const programmingLanguages = [
   {
-    name: "C",
-    icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/c/c-original.svg",
-  },
-  {
-    name: "C#",
-    icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/csharp/csharp-original.svg",
-  },
-  {
     name: "Python",
     icon: "https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/python/python-original.svg",
   },

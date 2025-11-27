@@ -2,12 +2,29 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, Github, ArrowUp, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Mail,
+  Github,
+  ArrowUp,
+  ChevronLeft,
+  ChevronRight,
+  Linkedin,
+  Download,
+  Badge,
+} from "lucide-react";
 import Image from "next/image";
 import NavBar from "@/components/NavBar";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
-import { frameworks, programmingLanguages, projects, tools, webTechnologies } from "@/lib/data";
+import {
+  frameworks,
+  programmingLanguages,
+  projects,
+  tools,
+  webTechnologies,
+} from "@/lib/data";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 type ProjectKey = "cosmetique" | "qcm" | "stock" | "vente" | "toquiz";
 
@@ -91,83 +108,137 @@ export default function Portfolio() {
       <NavBar />
 
       {/* Hero Section */}
+
       <section
         id="accueil"
         className="min-h-screen flex items-center justify-center px-4 pt-20 md:pt-0"
       >
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={staggerChildren}
-          className="text-center max-w-4xl"
-        >
-          <motion.div
-            variants={fadeInUp}
-            className="relative w-32 h-32 mx-auto mb-6"
-          >
-            <Image
-              src="/images/moi.jpg"
-              alt="RAZAFITSOTRA Toslin"
-              fill
-              className="rounded-full object-cover border-4 border-[var(--secondary)] shadow-lg"
-              priority
-            />
-          </motion.div>
-
-          <motion.h1
-            variants={fadeInUp}
-            className="text-4xl md:text-6xl font-bold mb-4 tracking-tight"
-          >
-            Bonjour, je suis{" "}
-            <span className="text-[var(--primary)]">RAZAFITSOTRA Toslin</span>,
-            développeur web
-          </motion.h1>
-
-          <motion.p
-            variants={fadeInUp}
-            className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-[var(--muted-foreground)]"
-          >
-            Étudiant en informatique DAII à l’EMIT Fianarantsoa (L3), passionné
-            par le développement web.
-          </motion.p>
-
-          <motion.div
-            variants={fadeInUp}
-            className="flex flex-col md:flex-row justify-center gap-4"
-          >
-            <motion.a
-              href="#projets"
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 0 15px rgba(0,0,0,0.2)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              style={{
-                backgroundColor: "var(--primary)",
-              }}
-              className="px-8 py-3 rounded-full font-semibold shadow-lg transition-all duration-300 cursor-pointer"
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content - Left Side */}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerChildren}
+              className="space-y-6"
             >
-              Découvrir mes projets
-            </motion.a>
+              <motion.div className="space-y-4">
+                <Badge variant="secondary" className="text-sm px-4 py-1">
+                  Développeur Fullstack
+                </Badge>
 
-            <motion.a
-              href="/images/CV_RAZAFITSOTRA_Toslin.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 0 15px rgba(0,0,0,0.2)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              style={{
-                backgroundColor: "var(--primary)",
-              }}
-              className="px-8 py-3 rounded-full font-semibold shadow-lg transition-all duration-300 cursor-pointer"
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+                  Bonjour, je suis{" "}
+                  <span className="text-[var(--primary)]">
+                    RAZAFITSOTRA Toslin
+                  </span>
+                </h1>
+
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  Je crée des applications web et mobile modernes, performantes
+                  et centrées sur l'expérience utilisateur.
+                </p>
+              </motion.div>
+
+              {/* Quick Contact Icons */}
+              <motion.div className="flex flex-col gap-4 pt-4">
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button asChild size="lg" className="gap-2">
+                    <motion.a
+                      href="#projets"
+                      whileHover={{
+                        scale: 1.05,
+                        boxShadow: "0 0 15px rgba(0,0,0,0.2)",
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                      style={{
+                        backgroundColor: "var(--primary)",
+                      }}
+                      className="px-8 py-3 rounded-full font-semibold shadow-lg transition-all duration-300 cursor-pointer"
+                    >
+                      Découvrir mes projets
+                    </motion.a>
+                  </Button>
+
+                  <Button asChild variant="outline" size="lg" className="gap-2">
+                    <motion.a
+                      href="/images/CV_RAZAFITSOTRA_Toslin.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{
+                        scale: 1.05,
+                        boxShadow: "0 0 15px rgba(0,0,0,0.2)",
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                      // style={{
+                      //   backgroundColor: "var(--primary)",
+                      // }}
+                      className="px-8 py-3 rounded-full font-semibold shadow-lg transition-all duration-300 cursor-pointer"
+                    >
+                      <Download size={16} />
+                      Télécharger mon CV
+                    </motion.a>
+                  </Button>
+                </div>
+
+                <div className="flex items-center gap-4 pt-4">
+                  <span className="text-sm text-muted-foreground">
+                    Me contacter :
+                  </span>
+                  <div className="flex gap-3">
+                    <Button variant="ghost" size="icon" asChild>
+                      <a
+                        href="mailto:razafitosy@gmail.com"
+                        className="hover:scale-110 transition-transform"
+                      >
+                        <Mail size={20} />
+                      </a>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                      <a
+                        href="https://github.com/ToslinRazafy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:scale-110 transition-transform"
+                      >
+                        <Github size={20} />
+                      </a>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                      <a
+                        href="https://www.linkedin.com/in/toslin-razafitsotra"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:scale-110 transition-transform"
+                      >
+                        <Linkedin size={20} />
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              className="flex justify-center lg:justify-end"
             >
-              Télécharger mon CV
-            </motion.a>
-          </motion.div>
-        </motion.div>
+              <div className="relative w-80 h-80 lg:w-96 lg:h-96 group">
+                <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl border-4 border-[var(--primary)] transition-colors duration-300 group-hover:border-[var(--primary-dark)]">
+                  <Image
+                    src="/images/moi.jpg"
+                    alt="RAZAFITSOTRA Toslin"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    priority
+                    sizes="(max-width: 1024px) 20rem, 24rem"
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
       </section>
 
       {/* About Section */}
@@ -195,17 +266,18 @@ export default function Portfolio() {
             style={{ color: "var(--muted-foreground)" }}
             className="leading-relaxed text-lg mb-8"
           >
-            Je suis RAZAFITSOTRA Toslin, étudiant en 3ᵉ année de Licence en
-            Informatique, spécialité Développement d’Applications Internet et
-            Intranet (DAII) à l’EMIT Fianarantsoa. Passionné par le
-            développement web et le développement de jeux vidéo, j’utilise des
-            technologies modernes comme React et Next.js pour créer des
-            applications performantes et intuitives. Je maîtrise Git et GitHub
-            pour la gestion de version et le travail collaboratif. Compétent en
-            bureautique (Word, PowerPoint, Excel, Access), je communique
-            couramment en français et je continue de perfectionner mon anglais.
-            Curieux et créatif, je m’inspire de mes loisirs tels que les jeux
-            vidéo, les mangas et les anime.
+            Passionné par le développement web, mobile et la création de jeux
+            vidéo, j’aime concevoir des applications performantes, intuitives et
+            centrées sur l’expérience utilisateur. J’utilise des technologies
+            modernes pour développer des solutions fiables, évolutives et
+            adaptées aux besoins des utilisateurs. Je maîtrise Git et GitHub
+            pour la gestion de versions et le travail en équipe, et je possède
+            également de solides compétences en bureautique (Word, Excel,
+            PowerPoint, Access). Je communique couramment en français et je
+            continue de renforcer mon niveau d’anglais. Curieux, rigoureux et
+            créatif, je puise mon inspiration dans mes centres d’intérêt tels
+            que les jeux vidéo, les mangas et les anime, ce qui nourrit mon sens
+            de l’innovation et ma vision technique.
           </motion.p>
           <motion.blockquote
             variants={fadeInUp}
@@ -392,6 +464,7 @@ export default function Portfolio() {
                 <ChevronLeft size={28} />
               </button>
               <button
+              title="sd"
                 onClick={(e) => {
                   e.stopPropagation();
                   handleNextImage(
